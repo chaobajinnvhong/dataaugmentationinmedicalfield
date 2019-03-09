@@ -18,11 +18,24 @@ Realization of some of my mentor's strategies on data augmentation in medical fi
 机器学习框架主要使用TensorFlow
 ### MCDA-NN.py
 文件包含所有框架训练
-#### def watch(object)：
+#### watch
 主要进行TensorFlow的变量查看
-#### def hebing01234()
+#### hebing01234
 将数据增强完后的数据根据类别进行合并
-#### def shujuload(tt):
+#### shujuload
+从已经扩展后的数据中生成训练数据，采用平衡2w下采样生成测试数据与测试标签
+#### testload
+第一次测试数据使用训练数据做测试80%（测试模型）
+#### testload1
+第二次测试数据使用训练数据分区域不重叠进行测试90%（测试模型可用性）
+#### testload2
+第三次测试数据使用原始数据rawdata1sort.csv进行测试平衡取样共100个，准确率80%
+#### batch
+用批处理使得训练数据保存平衡
+#### compute_accuracy
+计算测试的准确度
+#### 卷积层
+用卷积本想通过同层数据之间的准确度来找出某种关联关系，从而来帮助分类，用的2层卷积2层pooling，5*5的kernel，将原有数据压缩成64厚，在原136的维度后补8个0形成144即12*12的方阵，使用adam法，dropout为0.7的保留，误差loss使用交叉熵
 to be continued
 
 
