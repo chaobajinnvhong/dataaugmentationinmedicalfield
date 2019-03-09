@@ -37,6 +37,8 @@ Realization of some of my mentor's strategies on data augmentation in medical fi
 #### 卷积层
 用卷积本想通过同层数据之间的准确度来找出某种关联关系，从而来帮助分类，用的2层卷积2层pooling，5*5的kernel，将原有数据压缩成64厚，在原136的维度后补8个0形成144即12*12的方阵，使用adam法，dropout为0.7的保留，误差loss使用交叉熵
 to be continued
+### 增加noise
+通过增加高斯noise想在训练过程中更好的提高泛化性，结果表明作用不大准确率徘徊在30左右
 
 
 
